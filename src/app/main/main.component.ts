@@ -14,6 +14,7 @@ export class MainComponent implements OnInit {
     { value: 'pizza-1', viewValue: 'Pizza' },
     { value: 'tacos-2', viewValue: 'Tacos' }
   ];
+
   gitHubData: GitHubModel;
   gitHubDataList: Array<GitHubModel>;
   constructor(private _gt: GitHubService) {
