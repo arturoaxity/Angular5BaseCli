@@ -5,6 +5,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
 import { MatToolbarModule,
         MatSidenavModule,
@@ -34,7 +35,8 @@ export const MATERIAL_COMPONENTS = [
   MatListModule,
   MatIconModule,
   MatInputModule,
-  MatProgressBarModule
+  MatProgressBarModule,
+  MatSelectModule
 ];
 
 @NgModule({
