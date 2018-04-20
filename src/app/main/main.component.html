@@ -1,4 +1,5 @@
 <div >
   <h1>Main</h1>
-  <app-git-hub-card></app-git-hub-card>
+  <app-search-component (onSearhName)="onSearhName($event)"></app-search-component>
+  <app-git-hub-card (click)="removeElement(gitHubData)" *ngFor="let gitHubData of gitHubDataList" [github-data]="gitHubData"></app-git-hub-card>
 </div>

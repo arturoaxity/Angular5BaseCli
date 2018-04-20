@@ -1,4 +1,4 @@
-import { Component , OnInit, OnDestroy} from '@angular/core';
+import { Component, OnInit, OnDestroy, style, Input, EventEmitter,  Output} from '@angular/core';
 import { GitHubModel } from '../model/git-hub-model';
 @Component({
     selector: 'app-git-hub-card',
@@ -7,21 +7,20 @@ import { GitHubModel } from '../model/git-hub-model';
 })
 export class GitHubCardComponent implements OnInit , OnDestroy {
 
-    gitHubData: GitHubModel;
+    // tslint:disable-next-line:no-input-rename
+    @Input('github-data') gitHubData: GitHubModel;
+    @Output() public remove = new EventEmitter<GitHubModel>();
     constructor() {
-        this.gitHubData = new GitHubModel();
-        this.gitHubData.avatar_url = 'https://cdn1.iconfinder.com/data/icons/business-charts/512/customer-512.png';
-        this.gitHubData.followers = 0;
-        this.gitHubData.following = 1;
-        this.gitHubData.login = 'artur';
-        this.gitHubData.name = 'Arturo';
     }
 
     ngOnInit() {
-
     }
 
     ngOnDestroy(): void {
 
+    }
+
+    onRemoveClick() {
+        this.remove.emit(this.gitHubData);
     }
 }
