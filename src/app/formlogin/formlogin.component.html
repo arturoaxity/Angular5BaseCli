@@ -1,16 +1,19 @@
-<div class="padre">
+<mat-card class="padre">
+    <mat-card-title class="titlecard">Welcome User</mat-card-title>
+<div>
     <div>
-        <img height="160px" width="140px" src="http://athink.in//img/user_login.png">
+        <img height="160px" width="150px" src="http://iga.ir/images/login.png">
     </div>
     <div>
         <mat-form-field class="example-full-width">
             <input matInput type="text" placeholder="Usuario" [(ngModel)]="nombre" />
         </mat-form-field>
         <mat-form-field class="example-full-width">
-            <input matInput type="password" placeholder="Password" [(ngModel)]="contracena" />
+            <input matInput type="password"   placeholder="Password" [(ngModel)]="contracena" />
         </mat-form-field>
     </div>
     <div>
-        <button class="colorbutton" mat-button (click)="validarUser()">Login Usuer</button>
+        <button mat-raised-button  color="warn" mat-button (click)="validarUser()">Login Usuer</button>
     </div>
 </div>
+</mat-card>

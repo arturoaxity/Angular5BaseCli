@@ -8,10 +8,13 @@
   width: 100%;
 }
 .padre {
-  background-color: #fafafa;
+  border-radius: 8px;
   margin: 1rem;
   padding: 1rem;
-  border: 2px solid #ccc;
   /* IMPORTANTE */
   text-align: center;
+}
+.titlecard{
+  color:#000000;
+  font-weight: bold; 
 }
