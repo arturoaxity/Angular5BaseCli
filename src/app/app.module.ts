@@ -12,7 +12,8 @@ import { MatToolbarModule,
         MatListModule,
         MatIconModule,
         MatInputModule,
-        MatProgressBarModule } from '@angular/material';
+        MatProgressBarModule
+       } from '@angular/material';
 
 import { APP_PROVIDERS } from './app.providers';
 import { MainComponent } from './main/main.component';
@@ -24,7 +25,7 @@ import { SearchComponent } from './search-user/search-user.component';
 import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginComponent } from './login/login.component';
-import { FormLoginComponent } from './formlogin/formlogin.component';
+import {FormLoginComponent} from './formlogin/formlogin.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,

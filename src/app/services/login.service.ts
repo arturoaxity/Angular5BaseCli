@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class LoginServiceUser {
 
-    constructor() {}
+  constructor() {}
 
-    validarUsuario(name: string, contrasena: string) {
-      const result: string = name === 'artur' && contrasena === 'perez' ? 'bien' : 'mal' ;
-      console.log(`jsdkjdskdj ${result}`);
-    }
+    validarUsuario(name: string, contrasena: string): boolean {
+      const result: boolean = name === 'artur' && contrasena === 'perez' ? true
+       : false ;
+    return result;
+      }
 }

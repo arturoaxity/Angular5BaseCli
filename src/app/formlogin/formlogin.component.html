@@ -1,14 +1,16 @@
-<div class="Usuario">
+<div class="padre">
     <div>
-        <label>User</label>
-        <input class="formato" type="text" [(ngModel)]="nombre"/>
+        <img height="160px" width="140px" src="http://athink.in//img/user_login.png">
     </div>
     <div>
-        <label>Password</label>
-        <input class="formato" type="password" [(ngModel)]="contracena"/>
+        <mat-form-field class="example-full-width">
+            <input matInput type="text" placeholder="Usuario" [(ngModel)]="nombre" />
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput type="password" placeholder="Password" [(ngModel)]="contracena" />
+        </mat-form-field>
     </div>
     <div>
-<button (click)="validarUser()">Add Usuer</button>
+        <button class="colorbutton" mat-button (click)="validarUser()">Login Usuer</button>
     </div>
-    
 </div>

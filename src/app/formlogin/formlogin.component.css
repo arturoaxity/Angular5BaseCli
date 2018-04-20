@@ -1,6 +1,17 @@
-.Usuario{
-    margin: 20px;
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
 }
-.formato{
-    margin-left: 30px; 
+
+.example-full-width {
+  width: 100%;
+}
+.padre {
+  background-color: #fafafa;
+  margin: 1rem;
+  padding: 1rem;
+  border: 2px solid #ccc;
+  /* IMPORTANTE */
+  text-align: center;
 }
