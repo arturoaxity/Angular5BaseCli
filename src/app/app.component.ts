@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 })
 export class AppComponent {
   title = 'app';
+  isLoading = true;
 }
 
 export const routes: Routes = [
