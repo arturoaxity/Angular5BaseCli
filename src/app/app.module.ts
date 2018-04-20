@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatToolbarModule,
         MatSidenavModule,
@@ -14,7 +15,7 @@ import { MatToolbarModule,
         MatListModule,
         MatIconModule,
         MatInputModule,
-        MatProgressBarModule
+        MatProgressBarModule,
        } from '@angular/material';
 import { MatCardModule } from '@angular/material/card';
 import { APP_PROVIDERS } from './app.providers';
@@ -39,7 +40,8 @@ export const MATERIAL_COMPONENTS = [
   MatProgressBarModule,
   MatSelectModule,
   MatCardModule,
-  MatButtonToggleModule
+  MatButtonToggleModule,
+  MatSnackBarModule
 ];
 
 @NgModule({

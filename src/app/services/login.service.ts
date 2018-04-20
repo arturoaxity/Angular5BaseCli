@@ -7,8 +7,6 @@ export class LoginServiceUser {
   constructor() {}
 
     validarUsuario(name: string, contrasena: string): boolean {
-      const result: boolean = name === 'artur' && contrasena === 'perez' ? true
-       : false ;
-    return result;
+      return  (name === 'arturo' && contrasena === 'bravo' );
       }
 }
