@@ -8,7 +8,7 @@ import { GitHubService } from '../services/git-hub.service';
 })
 
 export class SearchComponent implements OnInit , OnDestroy {
-    private userName ;
+    public userName ;
     // tslint:disable-next-line:no-output-on-prefix
     @Output() public onSearhName = new EventEmitter<string>();
 

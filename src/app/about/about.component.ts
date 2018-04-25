@@ -9,13 +9,13 @@ import { DataService} from '../services/data.service';
 })
 export class AboutComponent implements OnInit {
 
-  joke: String = "";
+  joke: String = '';
   constructor(private _consumeService: ConsumeService,
               private _data: DataService) { }
 
   ngOnInit() { }
 
-  consulta(){
+  consulta() {
     this._data.setIsLoadingEvent(true);
     this._consumeService
         .getCities()
@@ -27,7 +27,7 @@ export class AboutComponent implements OnInit {
         (err) => {
             console.error(err);
             this._data.setIsLoadingEvent(false);
-        })
+        });
 }
 
 }

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ReactivoComponent } from './reactivo.component';
+import { APP_PROVIDERS } from '../app.providers';
 
 describe('ReactivoComponent', () => {
   let component: ReactivoComponent;
@@ -8,7 +9,8 @@ describe('ReactivoComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ReactivoComponent ]
+      declarations: [ ReactivoComponent ],
+      providers: [APP_PROVIDERS]
     })
     .compileComponents();
   }));

@@ -9,9 +9,9 @@ import { MatSnackBar } from '@angular/material';
 })
 
 export class FormLoginComponent implements OnInit {
-    private nombre;
-    private contracena;
-    constructor(private _logComponent: LoginServiceUser, private router: Router, public snackBar: MatSnackBar) { }
+    public nombre;
+    public contracena;
+    constructor(private _logComponent: LoginServiceUser, public router: Router, public snackBar: MatSnackBar) { }
     ngOnInit(): void {
 
     }
@@ -23,8 +23,6 @@ export class FormLoginComponent implements OnInit {
                  ? this.router.navigate(['']) : this.snackBar.open(mensage, event, {
                     duration: 3000,
                 });
-         this.nombre = '';
-         this.contracena = '';
         }
 
 }
