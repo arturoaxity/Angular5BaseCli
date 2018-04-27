@@ -29,6 +29,7 @@ import { PasivoComponent } from './pasivo/pasivo.component';
 import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginComponent } from './login/login.component';
 import {FormLoginComponent} from './formlogin/formlogin.component';
+import { FormulariouserComponent } from './formulariouser/formulariouser.component';
 
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
@@ -56,7 +57,8 @@ export const MATERIAL_COMPONENTS = [
     PasivoComponent,
     ReactivoComponent,
     LoginComponent,
-    FormLoginComponent
+    FormLoginComponent,
+    FormulariouserComponent
   ],
   imports: [
     BrowserModule,

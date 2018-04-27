@@ -11,6 +11,7 @@ import { MatSnackBar } from '@angular/material';
 export class FormLoginComponent implements OnInit {
     public nombre;
     public contracena;
+    public window ;
     constructor(private _logComponent: LoginServiceUser, public router: Router, public snackBar: MatSnackBar) { }
     ngOnInit(): void {
 
@@ -18,11 +19,11 @@ export class FormLoginComponent implements OnInit {
     validarUser() {
         const mensage = 'Datos incorrectos';
         const event = 'ok';
-        const result: any =
         this._logComponent.validarUsuario(this.nombre, this.contracena)
-                 ? this.router.navigate(['']) : this.snackBar.open(mensage, event, {
-                    duration: 3000,
-                });
+            ? this.router.navigate(['']) : this.snackBar.open(mensage, event, {
+                duration: 3000,
+            });
+
         }
 
 }

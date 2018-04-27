@@ -47,11 +47,34 @@ fdescribe('FormLoginComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should  service', () => {
+  it('should  component click', () => {
     component.nombre = 'arturo';
     component.contracena = 'bravo';
     const navigate = spyOn(component.router, 'navigate');
     component.validarUser();
     expect(navigate).toHaveBeenCalledWith(['']);
   });
+
+
+  it('should  component view', () => {
+    const compile = fixture.nativeElement;
+    component.nombre = 'arturo';
+    component.contracena = 'bravo';
+    const navigate = spyOn(component.router, 'navigate');
+    compile.querySelector('button').click();
+    expect(navigate).toHaveBeenCalledWith(['']);
+  });
+
+  it('should  component snackBar', () => {
+    const componenteSnakBar = component.snackBar.open('Open', 'ok');
+    componenteSnakBar.afterDismissed().subscribe((x) => {
+      expect(x.dismissedByAction).toEqual(false);
+    });
+    componenteSnakBar.onAction().subscribe((x) => {
+      expect(x).toBeNull();
+    });
+    componenteSnakBar.dismiss();
+  });
+
+
 });

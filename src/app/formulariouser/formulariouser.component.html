@@ -1,0 +1,29 @@
+<mat-card class="padre">
+  <mat-card-title class="titlecard">Log In Angular </mat-card-title>
+  <div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="Usuario" [(ngModel)]="nombre" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="Password" [(ngModel)]="contracena" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="confPass" [(ngModel)]="confPass" />
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput type="password" placeholder="correo" [(ngModel)]="correo" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field class="example-full-width">
+        <input matInput type="text" placeholder="userName" [(ngModel)]="userName" />
+      </mat-form-field>
+    </div>
+    <div>
+      <button mat-raised-button color="primary" mat-button (click)="validarUser()">Aceptar</button>
+    </div>
+  </div>
+</mat-card>
