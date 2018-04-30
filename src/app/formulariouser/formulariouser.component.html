@@ -1,29 +1,33 @@
+
 <mat-card class="padre">
-  <mat-card-title class="titlecard">Log In Angular </mat-card-title>
-  <div>
-    <div>
-      <mat-form-field class="example-full-width">
-        <input matInput type="text" placeholder="Usuario" [(ngModel)]="nombre" />
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput type="password" placeholder="Password" [(ngModel)]="contracena" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="example-full-width">
-        <input matInput type="text" placeholder="confPass" [(ngModel)]="confPass" />
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <input matInput type="password" placeholder="correo" [(ngModel)]="correo" />
-      </mat-form-field>
-    </div>
-    <div>
-      <mat-form-field class="example-full-width">
-        <input matInput type="text" placeholder="userName" [(ngModel)]="userName" />
-      </mat-form-field>
-    </div>
-    <div>
-      <button mat-raised-button color="primary" mat-button (click)="validarUser()">Aceptar</button>
-    </div>
-  </div>
+  <mat-card-title>Registrate Aqui</mat-card-title>
+ 
+<form  novalidate [formGroup]="formUser" (ngSubmit)="saveData()" >
+    <div  class="example-form">
+  <mat-form-field class="example-full-width">
+    <input matInput  formControlName="userName" type="text" placeholder="User Name" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  formControlName="usuario" type="text" placeholder="Usuario" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  formControlName="password" type="password" placeholder="Password" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  formControlName="confPassword" type="password" placeholder="confirmar Password" >
+  </mat-form-field>
+  <mat-form-field class="example-full-width">
+    <input matInput  formControlName="email" type="email" placeholder="Email" >
+  </mat-form-field>
+</div>
+  <button mat-button color="primary" type="submit" [disabled]="formUser.invalid" >Save</button>
+  
+  <p>Form: {{formUser.value | json}}</p>
+  <p>Form status: {{formUser.status}}</p>
+  <p>Form password :{{formUser.get('password').status}}</p>
+  <p>Form confPassword :{{formUser.get('confPassword').status}}</p>
+  <p>Form email :{{formUser.get('email').status}}</p>
+  <p>Form userName :{{formUser.get('userName').status}}</p>
+  <p>Form userName :{{formUser.get('usuario').status}}</p>
+</form>
 </mat-card>

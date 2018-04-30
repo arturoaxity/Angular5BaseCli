@@ -17,7 +17,7 @@ import { ReactivoComponent } from '../reactivo/reactivo.component';
 import { PasivoComponent } from '../pasivo/pasivo.component';
 import { APP_BASE_HREF } from '@angular/common';
 
-fdescribe('FormLoginComponent', () => {
+describe('FormLoginComponent', () => {
   let component: FormLoginComponent;
   let fixture: ComponentFixture<FormLoginComponent>;
   beforeEach(async(() => {
