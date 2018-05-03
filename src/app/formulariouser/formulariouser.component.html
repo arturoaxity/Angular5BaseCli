@@ -19,6 +19,7 @@
   <mat-form-field class="example-full-width">
     <input matInput  formControlName="email" type="email" placeholder="Email" >
   </mat-form-field>
+  <mat-checkbox formControlName="checked">Terminos y Condiciones</mat-checkbox>
 </div>
   <button mat-button color="primary" type="submit" [disabled]="formUser.invalid" >Save</button>
   
@@ -29,5 +30,6 @@
   <p>Form email :{{formUser.get('email').status}}</p>
   <p>Form userName :{{formUser.get('userName').status}}</p>
   <p>Form userName :{{formUser.get('usuario').status}}</p>
+  <p>Form checked :{{formUser.get('checked').status}}</p>
 </form>
 </mat-card>

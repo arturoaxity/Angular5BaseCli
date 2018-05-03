@@ -30,7 +30,7 @@ import { ReactivoComponent } from './reactivo/reactivo.component';
 import { LoginComponent } from './login/login.component';
 import {FormLoginComponent} from './formlogin/formlogin.component';
 import { FormulariouserComponent } from './formulariouser/formulariouser.component';
-
+import { MatCheckboxModule } from '@angular/material/checkbox';
 export const MATERIAL_COMPONENTS = [
   MatToolbarModule,
   MatSidenavModule,
@@ -42,7 +42,8 @@ export const MATERIAL_COMPONENTS = [
   MatSelectModule,
   MatCardModule,
   MatButtonToggleModule,
-  MatSnackBarModule
+  MatSnackBarModule,
+  MatCheckboxModule
 ];
 
 @NgModule({
